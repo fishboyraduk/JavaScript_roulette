@@ -1,8 +1,8 @@
 // Deposit Money
 // Determine number of bets
 // Collect bet
-
 // Spin slot machine
+
 // Check if the user won
 // Give winnings/take bet
 // Play again/End game
@@ -80,8 +80,9 @@ const spin = () => {
             symbols.push(symbol);
         }
     }
-    const reels = [[],[],[]];
+    const reels = [];
     for (let i = 0; i < COLS; i++){
+        reels.push([]);
         const reelSymbols = [...symbols];
         for (let j = 0; j < ROWS; j++){
             const randomIndex = Math.floor(Math.random()* reelSymbols.length);
